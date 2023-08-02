@@ -6,7 +6,6 @@ WORKDIR /app
 ADD Gemfile  .
 
 RUN \
-   apk --update add ruby && \
    gem install bundler --no-document && \
    bundle config --global silence_root_warning 1 && \
    bundle install --quiet

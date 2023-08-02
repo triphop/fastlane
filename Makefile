@@ -1,2 +1,6 @@
+TAG = "1.0.0"
+
 all:
-	docker build -t foobar .
+	docker build -t fastlane:${TAG} .
+
+.PHONY: all
