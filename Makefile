@@ -6,4 +6,10 @@ all:
 		--platform linux/arm64/v8,linux/amd64 \
 		--tag yanshoutong/fastlane:${TAG} .
 
-.PHONY: all
+latest: all
+	docker buildx build \
+		--push \
+		--platform linux/arm64/v8,linux/amd64 \
+		--tag yanshoutong/fastlane:latest .
+
+.PHONY: all latest
